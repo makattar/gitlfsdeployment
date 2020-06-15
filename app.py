@@ -24,7 +24,7 @@ model_diabetes = pickle.load(open('modeldiabetes.pkl', 'rb'))
 model_heart = pickle.load(open('modelheart.pkl', 'rb'))
 MODEL_PATH = 'models/pneumonia_vgg16.h5'
 # Load your trained model custom_objects={'Adam':lambda **kwargs : hvd.DistributedOptimizer(keras.optimizers.Adam(**kwargs))}
-model = load_model('pneumonia_vgg16.h5',compile=False)
+model = load_model(MODEL_PATH,compile=False)
 model._make_predict_function()
 
 def model_predict(img_path, model):
