@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Diabetes API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+    
+   {{ prediction_text }}
+   <br>
+   <br>
+	<h1>Predict Diabetes</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predictdiabetes')}}"method="post">
+	<div class="grid-container_d">
+		<h5><div class="grid-item">1.Enter No of Pregnancies</div></h5>
+    	<input type="text" name="Pregnancies" placeholder=" No of Pregnancies" required="required" />
+		<h5><div class="grid-item">2.Enter Plasma Glucose Concentration Test Results</div></h5>
+		<input type="text" name="Glucose" placeholder="Glucose" required="required" />
+		<h5><div class="grid-item">3.Enter Diastolic Blood Pressure In mm Hg</div></h5>
+		<input type="text" name="BloodPressure" placeholder="BloodPressure(mm Hg)" required="required" />
+		<h5><div class="grid-item">4.Enter Triceps Skin Fold Thickness In mm</div></h5>
+		<input type="text" name="SkinThickness" placeholder="SkinThickness(mm)" required="required" />
+		<h5><div class="grid-item">5.Enter Insulin Test Results(mm U/ml)</div></h5>
+		<input type="text" name="Insulin" placeholder="Insulin(mm U/ml)" required="required" />
+		<h5><div class="grid-item">6.Enter Weights in Kg</div></h5>
+		<input type="text" name="Weight" placeholder="Weight(kg)" required="required" />
+		<h5><div class="grid-item">7.Enter Height in meters</div></h5>
+		<input type="text" name="Height" placeholder="Height(m)" required="required" />
+		<h5><div class="grid-item">8.Enter Diabetes Pedigree Function (based On Family history)</div></h5>
+		<!--<input type="text" name="BMI" placeholder="BMI" required="required" />-->
+		<input type="text" name="PedigreeFunction" placeholder="DiabetesPedigreeFuncion" required="required" />
+		<h5><div class="grid-item">9.Enter Age in years</div></h5>
+		<input type="text" name="Age" placeholder="Age(Years)" required="required" />
+	</div>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+	
+	
+   
+
+ </div>
+
+
+</body>
+</html>

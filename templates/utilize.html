@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Utilize</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+
+
+</head>
+ 
+<body>
+
+<nav>
+<input type="checkbox" id="check">
+<label for="check" class="checkbtn">
+<i class="fas fa-bars"></i>
+</label>
+<label class="logo">Human Health Prediction</label>
+<ul>
+<li><a  href="{{url_for('home')}}">Home</a></li>
+<li><a  href="{{url_for('predictpage')}}">Predict</a></li>
+<li><a class="active" href="#">Utilize</a></li>
+<li><a href="{{url_for('contacts')}}">Contact</a></li>
+
+</ul>
+</nav>
+
+
+<h1>Instruction for utilization of system</h1>
+
+<h2>&nbsp;&nbsp;Utilization as per profession:</h2>
+<br>
+
+
+<h2>&nbsp;&nbsp;1. Doctors or Physicans</h2>
+<h3><ul><br>
+<li>&nbsp;&nbsp; -> Doctors or Physicans can enters the test reports details as per disease. </li>
+<li>&nbsp;&nbsp; -> The machine will calculate prediction result based on input via, test reports. </li>
+</ul>
+</h3>
+
+<br><br>
+<h2>&nbsp;&nbsp;2. Common Person</h2>
+<h3><ol><br>
+<li>&nbsp;&nbsp; -> Firstly carryout all the test required for prediction. </li>
+<li>&nbsp;&nbsp; -> Enter all necessary data in respective feilds of disease prediction. </li>
+<li>&nbsp;&nbsp; -> The machine will calculate prediction result based on input via, test reports. </li>
+</ol></h3>
+
+</body> 
+
+</html>

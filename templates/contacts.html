@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Contact</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+
+
+</head>
+ 
+<body>
+
+<nav>
+<input type="checkbox" id="check">
+<label for="check" class="checkbtn">
+<i class="fas fa-bars"></i>
+</label>
+<label class="logo">Human Health Prediction</label>
+<ul>
+<li><a  href="{{url_for('home')}}">Home</a></li>
+<li><a  href="{{url_for('predictpage')}}">Predict</a></li>
+<li><a href="{{url_for('utilize')}}">Utilize</a></li>
+<li><a href="{{url_for('contacts')}}" class="active">Contact</a></li>
+
+</ul>
+</nav>
+
+
+<h1>Contacts</h1>
+
+<h2>&nbsp;&nbsp;Contact us at:"<a class="abc "href= "mailto:h_healthpred@gmail.com">h_healthpred@gmail.com</a>"</h2>
+
+
+
+
+
+</body> 
+
+</html>

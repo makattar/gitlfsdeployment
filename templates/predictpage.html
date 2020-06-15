@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Predict Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+
+
+</head>
+ 
+<body>
+
+<nav>
+<input type="checkbox" id="check">
+<label for="check" class="checkbtn">
+<i class="fas fa-bars"></i>
+</label>
+<label class="logo">Human Health Prediction</label>
+<ul>
+<li><a  href="{{url_for('home')}}">Home</a></li>
+<li><a class="active" href="#">Predict</a></li>
+<li><a href="{{url_for('utilize')}}">Utilize</a></li>
+<li><a href="{{url_for('contacts')}}">Contact</a></li>
+
+</ul>
+</nav>
+
+
+<h1>PREDICT DISEASES</h1>
+<div class="itemlist">
+<ul>
+<li><h3 class="disease_"><a href="{{ url_for('diabetes')}}">1.Diabetes Prediction</a></h3></li>
+<li><h1>(Diabetes is a disease that occurs when your blood glucose, also called blood sugar, is too high. Blood glucose is your main source of energy and comes from the food you eat. Insulin, a hormone made by the pancreas, helps glucose from food get into your cells to be used for energy. Sometimes your body doesn’t make enough—or any—insulin or doesn’t use insulin well. Glucose then stays in your blood and doesn’t reach your cells.)</h1></li>
+
+<li><h3 class="disease_"><a href="{{ url_for('heart')}}">2.Heart Disease Prediction</a></h3></li>
+<li><h1>(Heart disease describes a range of conditions that affect your heart. Diseases under the heart disease umbrella include blood vessel diseases, such as coronary artery disease; heart rhythm problems (arrhythmias); and heart defects you're born with (congenital heart defects), among others.)</h1></li>
+
+<li><h3 class="disease_"><a href="{{ url_for('pneumonia')}}">3.Pneumonia Prediction</a></h3></li>
+<li><h1>(Pneumonia is an inflammatory condition of the lung affecting primarily the small air sacs known as alveoli.Pneumonia is usually caused by infection with viruses or bacteria and less commonly by other microorganisms, certain medications and conditions such as autoimmune diseases. Risk factors include cystic fibrosis, chronic obstructive pulmonary disease (COPD), asthma, diabetes, heart failure, a history of smoking, a poor ability to cough such as following a stroke, and a weak immune system. Diagnosis is often based on the symptoms and physical examination like Chest X-ray, blood tests, and culture of the sputum may help confirm the diagnosis.)</h1></li>
+
+</ul>
+</div>
+
+
+
+</body> 
+
+</html>

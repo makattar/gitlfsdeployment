@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>HEART API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+
+ <div class="login">
+	<h1>Heart Disease Prediction</h1>
+	
+   {{ prediction_text }}
+   <br>
+   <br>
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predictheart')}}"method="post">
+	<div class="grid-container_h">
+		<h5><div class="grid-item">1.Enter Age in Years</div></h5>
+    	<input type="text" name="Age" placeholder="Age(Years)" required="required" />
+		<h5><div class="grid-item">2.Enter Sex(Male:1,Female:0)</div></h5>
+		<input type="text" name="Sex" placeholder="Sex(Male,Female)" required="required" />
+		<h5><div class="grid-item">3.Enter Chest Pain(0:typical 1:atypical 2:nonanginal pain 3:asymptotic)</div></h5>
+		<input type="text" name="ChestPain" placeholder="ChestPain(0:typical 1:atypical 2:nonanginalpain 3:asymptotic)" required="required" />
+		<h5><div class="grid-item">4.Enter Resting Blood Pressure(mmHg)</div></h5>
+		<input type="text" name="Resting Blood Pressure" placeholder="Resting Blood Pressure(mmHg)" required="required" />
+		<h5><div class="grid-item">5.Enter Cholestrol(mg/dl)</div></h5>
+		<input type="text" name="Cholestrol" placeholder="Cholestrol(mg/dl)" required="required" />
+		<h5><div class="grid-item">6.Enter Fasting Blood Pressure(if value>120mg/dl then true else false)</div></h5>
+		<input type="text" name="Fasting Blood Pressure" placeholder="Fasting Blood Pressure(if value>120mg/dl then true else false)" required="required" />
+		<h5><div class="grid-item">7.Electro Cardiographic Result(0:Normal,1:Having ST wave,2:left ventricular hyperthrophy)</div></h5>
+		<input type="text" name="ElectroCardiographic Result" placeholder="ElectroCardiographic Result(0:Normal,1:Having ST wave,2:left ventricular hyperthrophy)" required="required" />
+		<h5><div class="grid-item">8.Enter Maximum Heart Rate achieved</div></h5>
+		<input type="text" name="MaximumHeartRate" placeholder="MaximumHeartRate" required="required" />
+		<h5><div class="grid-item">9.Enter InducedAnginaExercise(yes:1/no:0)</div></h5>
+		<input type="text" name="InducedAnginaExercise" placeholder="InducedAnginaExercise(yes:1/no:0)" required="required" />
+		<h5><div class="grid-item">10.Enter STDepression</div></h5>
+		<input type="text" name="STDepression" placeholder="STDepression" required="required" />
+		<h5><div class="grid-item">11.Enter STS lope(0:Upsloping,1:Flat,2:Downsloping)</div></h5>
+		<input type="text" name="STSlope" placeholder="STSlope(0:Upsloping,1:Flat,2:Downsloping)" required="required" />
+		<h5><div class="grid-item">12.Enter No Of Major Vessels(0-3)</div></h5>
+		<input type="text" name="NoOfMajorVessels" placeholder="NoOfMajorVessels(0-3)" required="required" />
+		<h5><div class="grid-item">13.Enter Thalassemia(1-Normal,2-Fixed Defect,3-Reversal Defect)</div></h5>
+		<input type="text" name="Thalassemia" placeholder="Thalassemia(1-Normal,2-FixedDefect,3-ReversalDefect)" required="required" />
+	</div>
+		<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   
+ </div>
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>PREDICT HOMEPAGE</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+
+
+</head>
+ 
+<body>
+
+<nav>
+<input type="checkbox" id="check">
+<label for="check" class="checkbtn">
+<i class="fas fa-bars"></i>
+</label>
+<label class="logo">Human Health Prediction</label>
+<ul>
+<li><a class="active" href="#">Home</a></li>
+<li><a href="{{url_for('predictpage')}}">Predict</a></li>
+<li><a href="{{url_for('utilize')}}">Utilize</a></li>
+<li><a href="{{url_for('contacts')}}">Contact</a></li>
+
+</ul>
+</nav>
+<h1>Introduction</h1><br>
+<h3 class="cont">The main objective of this project is to predict a person’s health from top three deadly diseases. This project works on previous data sets of affected patients and trains the models from itself using one of the Machine Learning algorithm and provide almost accurate prediction.<br><br><br>
+Major challenge is how to extract the information from these data because the amount is very large so some data mining and machine learning techniques can be used. Also, the expected outcome and scope of this project is that if disease can be predicted than early treatment can begiven to the patients which can reduce the risk of life and save life of patients and cost to get treatment of diseases can be reduced up to some extent by early recognition.<br><br><br> 
+It might feel curious or fascinating that you wanted to know what disease that you might encounter in future or in upcoming times for these personalities and many other organization this system will be very useful topredict one’s health from top three diseases.
+</h3>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<button><a  href="{{url_for('predictpage')}}">Let's Predict</a></button>
+
+
+
+
+</body> 
+
+</html>
